@@ -1,9 +1,96 @@
- <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Revision</title>
+  <style>
+    body { font-family: sans-serif; padding: 2em; max-width: 600px; margin: auto; }
+    img { max-width: 100%; margin-top: 1em; }
+    .option { display: block; margin: 0.5em 0; }
+    #feedback { margin-top: 1em; font-weight: bold; }
+    #nextBtn { margin-top: 1.5em; display: none; }
+  </style>
+</head>
 <body>
+  <h1>Quiz Revision</h1>
+  <div id="quiz-container">
+    <div id="question"></div>
+    <div id="options"></div>
+    <div id="feedback"></div>
+    <button id="nextBtn">Next Question</button>
+  </div>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+  <script>
+    let questions = [];
+    let currentQuestion = {};
 
+    async function loadQuestions() {
+      const res = await fetch('questions.json');
+      questions = await res.json();
+      showRandomQuestion();
+    }
+
+    function showRandomQuestion() {
+      document.getElementById('feedback').textContent = '';
+      document.getElementById('nextBtn').style.display = 'none';
+
+      const q = questions[Math.floor(Math.random() * questions.length)];
+      currentQuestion = q;
+
+      const questionDiv = document.getElementById('question');
+      const optionsDiv = document.getElementById('options');
+      questionDiv.innerHTML = `<strong>Q${q.id}:</strong> ${q.text}`;
+      if (q.image) {
+        questionDiv.innerHTML += `<br><img src="${q.image}" alt="Question image">`;
+      }
+      optionsDiv.innerHTML = '';
+
+      if (q.type === 'mcq') {
+        q.options.forEach((opt, i) => {
+          const btn = document.createElement('button');
+          btn.textContent = opt;
+          btn.className = 'option';
+          btn.onclick = () => checkAnswer(i);
+          optionsDiv.appendChild(btn);
+        });
+      } else if (q.type === 'short') {
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.id = 'shortAnswer';
+        optionsDiv.appendChild(input);
+        const btn = document.createElement('button');
+        btn.textContent = 'Submit';
+        btn.onclick = () => checkAnswer(input.value);
+        optionsDiv.appendChild(btn);
+      }
+    }
+
+    function checkAnswer(answer) {
+      const feedback = document.getElementById('feedback');
+      if (currentQuestion.type === 'mcq') {
+        if (answer === currentQuestion.answer) {
+          feedback.textContent = '✅ Correct!';
+          feedback.style.color = 'green';
+        } else {
+          feedback.textContent = '❌ Wrong!';
+          feedback.style.color = 'red';
+        }
+      } else if (currentQuestion.type === 'short') {
+        if (answer.trim().toLowerCase() === currentQuestion.answer.trim().toLowerCase()) {
+          feedback.textContent = '✅ Correct!';
+          feedback.style.color = 'green';
+        } else {
+          feedback.textContent = '❌ Wrong!';
+          feedback.style.color = 'red';
+        }
+      }
+      document.getElementById('nextBtn').style.display = 'inline';
+    }
+
+    document.getElementById('nextBtn').onclick = showRandomQuestion;
+
+    loadQuestions();
+  </script>
 </body>
-</html> 
+</html>
