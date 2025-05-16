@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "type": "mcq",
+    "text": "What is the capital of France?",
+    "options": ["Berlin", "Madrid", "Paris", "Rome"],
+    "answer": 2
+  },
+  {
+    "id": 2,
+    "type": "short",
+    "text": "Who painted the Mona Lisa?",
+    "answer": "Leonardo da Vinci",
+    "image": "images/mona-lisa.jpg"
+  }
+]
