@@ -1,16 +1,106 @@
 [
   {
     "id": 1,
-    "type": "mcq",
-    "text": "What is the capital of France?",
-    "options": ["Berlin", "Madrid", "Paris", "Rome"],
-    "answer": 2
+    "type": "tf",
+    "question": "속담 '낮말은 새가 듣고 밤말은 쥐가 듣는다'는 '항상 말을 조심하라'는 의미이다",
+    "answer": "True",
+    "explanation": "항상 누군가가 듣고 있을 수 있으니, 말은 언제나 조심해야 한다는 교훈을 담고 있습니다.",
+    "image": ""
   },
   {
     "id": 2,
-    "type": "short",
-    "text": "Who painted the Mona Lisa?",
-    "answer": "Leonardo da Vinci",
-    "image": "sample.jpeg"
+    "type": "tf",
+    "question": "세종대왕은 훈민정음 창제 당시 집현전 학자들의 반대만 겪었다",
+    "answer": "False",
+    "explanation": "일부 집현전 학자들은 훈민정음 창제에 적극적으로 협력했습니다.",
+    "image": ""
+  },
+  {
+    "id": 3,
+    "type": "tf",
+    "question": "'삼계탕'은 주로 오리고기로 만드는 전통 음식이다",
+    "answer": "False",
+    "explanation": "삼계탕은 닭고기를 사용한 보양 음식입니다.",
+    "image": ""
+  },
+  {
+    "id": 4,
+    "type": "tf",
+    "question": "이순신 장군이 남긴 유명한 명언은 \"죽고자 하면 살 것이요, 살고자 하면 죽을 것이다\"이다",
+    "answer": "True",
+    "explanation": "이순신 장군의 결연한 의지를 나타내는 명언입니다.",
+    "image": ""
+  },
+  {
+    "id": 5,
+    "type": "tf",
+    "question": "'팔도비빔밥'은 지역별 특산물을 섞어 만든 음식이라는 의미이다",
+    "answer": "True",
+    "explanation": "'팔도비빔밥'은 지역별 특산물을 섞어 만든 음식이라는 의미이다",
+    "image": ""
+  },
+  {
+    "id": 6,
+    "type": "tf",
+    "question": "고려 시대의 왕건은 후삼국을 통일한 인물이다",
+    "answer": "True",
+    "explanation": "왕건은 후삼국을 통일하고 고려를 세운 인물입니다.",
+    "image": ""
+  },
+  {
+    "id": 7,
+    "type": "tf",
+    "question": "'김치'의 주재료인 배추는 조선 시대 초기부터 사용되었다",
+    "answer": "False",
+    "explanation": "배추와 고추는 조선 후기에서야 본격적으로 사용되었습니다.",
+    "image": ""
+  },
+  {
+    "id": 8,
+    "type": "tf",
+    "question": "'소 잃고 외양간 고친다'는 '미리 예방하라'는 교훈을 준다",
+    "answer": "True",
+    "explanation": "손실이 난 후에 대처하는 어리석음을 풍자하는 속담입니다.",
+    "image": ""
+  },
+  {
+    "id": 9,
+    "type": "tf",
+    "question": "한국의 독립운동가 안중근은 을사늑약 체결을 주도한 이토 히로부미를 저격했다",
+    "answer": "True",
+    "explanation": "안중근 의사는 이토 히로부미를 하얼빈에서 저격했습니다.",
+    "image": ""
+  },
+  {
+    "id": 10,
+    "type": "tf",
+    "question": "'된장'은 메주를 발효시켜 만든 한국 전통 양념이다",
+    "answer": "True",
+    "explanation": "된장은 메주를 발효시켜 만든 대표적인 장류입니다.",
+    "image": ""
+  },
+  {
+    "id": 11,
+    "type": "tf",
+    "question": "속담 ‘찬물도 위아래가 있다’는 ‘아주 쉬운 일’을 비유하는 말이다",
+    "answer": "True",
+    "explanation": "‘찬물도 위아래가 있다’는 간단한 일이라도 예의와 순서가 있음을 뜻합니다. 즉, 아무리 쉬운 일이라도 예절을 지켜야 한다는 교훈을 담고 있습니다.",
+    "image": ""
+  },
+  {
+    "id": 12,
+    "type": "tf",
+    "question": "세종대왕의 친할아버지는 태조 이성계이다",
+    "answer": "True",
+    "explanation": "세종대왕(이도)의 친할아버지는 조선을 건국한 태조 이성계입니다.",
+    "image": ""
+  },
+  {
+    "id": 13,
+    "type": "tf",
+    "question": "홍탁삼합에서 ‘홍탁’은 홍어와 돼지고기를 말한다",
+    "answer": "False",
+    "explanation": "‘홍탁’은 홍어와 막걸리를 뜻합니다. ‘삼합’은 홍어, 돼지고기, 김치를 함께 먹는 조합입니다.",
+    "image": ""
   }
 ]
